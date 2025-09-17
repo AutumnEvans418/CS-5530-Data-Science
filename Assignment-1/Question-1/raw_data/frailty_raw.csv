@@ -1,4 +1,4 @@
-Height,Weight,Age,Grip_strength,Frailty
+Height_in,Weight_lbs,Age_yrs,Grip_strength_kg,Frailty
 65.8,112,30,30,N
 71.5,136,19,31,N
 69.4,153,45,29,N
