@@ -5,7 +5,7 @@
 Question: Are there gender differences in math vs reading?
 ![plot](gender_boxplot.svg)
 
-Based on the boxplots above, we observe that on average males be
+Based on the boxplots above, we observe that on average males
 
 ## 2. Test prep impact on math
 Question: Do students who completed test prep score higher in math?
