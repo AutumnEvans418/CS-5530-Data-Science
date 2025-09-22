@@ -9,15 +9,23 @@ print(df)
 
 # Side‑by‑side boxplots of math score and reading score grouped by gender.
 bp = df.boxplot(column=['math score', 'reading score'], by=['gender'], figsize=(8,6))
+plt.yticks(ticks=range(0, 105, 5))
+
 plt.savefig("Assignment-1\\Question-2\\reports\\gender_boxplot.svg")
 
 # histogram of math score grouped by test preparation course.
 hist = df.plot.hist(
     column='math score', 
     by='test preparation course', 
-    figsize=(8,6), 
-    ylim=(0, 165), 
-    title="Math Score Distribution by Test Preparation Course")
+    figsize=(8,6),
+    ylim = (0,0.045),
+    bins=15,
+    title="Math Score Distribution by Test Preparation Course",
+    density=True)
+
+for ax in hist:
+    ax.set_xticks(range(0, 105, 5))
+
 plt.savefig("Assignment-1\\Question-2\\reports\\test_prep_histogram.svg")
 
 # lunch and average performance
