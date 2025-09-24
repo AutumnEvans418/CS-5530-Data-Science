@@ -61,21 +61,23 @@ plt.savefig("Assignment-1\\Question-2\\reports\\score_correlation_heatmap.svg")
 
 # Math vs reading with trend lines by test prep 
 # Scatter plot with two straight best‑fit lines (one for each group: completed, none)
-df.plot.scatter(
-    x='reading score',
-    y='math score',
-    c=df['test preparation course'].map({'completed': 'blue', 'none': 'orange'}),
-    figsize=(8,6),
-    title="Math vs Reading Scores by Test Preparation Course"
-)
 
-# add best fit lines
 groups = [('completed', 'blue'), ('none', 'orange')]
+fig, ax = plt.subplots()
 for group in groups:
     x = np.array(df[df['test preparation course'] == group[0]]['reading score'])
     y = np.array(df[df['test preparation course'] == group[0]]['math score'])
+
+    ax.scatter(x, y, c=group[1], label=group[0], alpha=0.5, s=10)
+
     z = np.polyfit(x,y,1)
     p = np.poly1d(z)
-    plt.plot(x,p(x), label=group, color=group[1])
+    plt.plot(x,p(x), color=group[1])
+
+ax.set_title("Math vs Reading Scores by Test Preparation Course")
+ax.legend()
+ax.grid(True)
+ax.set_xlabel("Reading Score")
+ax.set_ylabel("Math Score")
 
 plt.savefig("Assignment-1\\Question-2\\reports\\math_vs_reading_scatter.svg")
