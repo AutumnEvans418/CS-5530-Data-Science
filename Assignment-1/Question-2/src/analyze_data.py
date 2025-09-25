@@ -68,7 +68,7 @@ for group in groups:
     x = np.array(df[df['test preparation course'] == group[0]]['reading score'])
     y = np.array(df[df['test preparation course'] == group[0]]['math score'])
 
-    ax.scatter(x, y, c=group[1], label=group[0], alpha=0.5, s=10)
+    ax.scatter(x, y, c=group[1], label=f"{group[0]} ({len(x)})", alpha=0.5, s=10)
 
     z = np.polyfit(x,y,1)
     p = np.poly1d(z)
