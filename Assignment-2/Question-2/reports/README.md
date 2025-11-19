@@ -5,23 +5,12 @@
 - [Source Code](../src/process.ipynb)
 
 # A) Glucose Population vs Random Sample
+
 Based on the chart and table below, we can see that using a random sample of 25 observations, our mean is off by 4 and our max is off by 6.
+
 ![](glucose.svg)
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -85,27 +74,20 @@ Based on the chart and table below, we can see that using a random sample of 25 
 </div>
 
 # B) BMI Sample vs Population
+
 Based on the charts below, we can see that the 98th percentiles are extremely close to each other, but there is a lot of data and outliers that are not captured in the sample. 
+
 ![](bmi-bar.svg)
+
 ![](bmi-hist.svg)
 
 # C) Blood Pressure Bootstrap vs Population
+
 Based on the chart and table below, we observe that bootstrap is an effective way at estimating population characteristics, with the values being significantly closer when compared to the glucose test. 
+
 ![](bp.svg)
+
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
