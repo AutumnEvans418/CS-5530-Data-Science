@@ -5,23 +5,12 @@
 - [Source Code](../src/process.ipynb)
 
 # E) Query Result
+
 Looking at the data below, we can see that Bangalore had the highest used car price on average.
 
 ### Median Values for Used Cars Newer than 2014 Grouped By Location
+
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
